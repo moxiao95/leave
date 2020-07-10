@@ -1,0 +1,60 @@
+.my {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #eaeaea;
+}
+
+.my .top-bgc {
+	height: 100rpx;
+	background: #51ccf0;
+}
+.my .top-img {
+	position: absolute;
+	top: 0;
+	left: 300rpx;
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+}
+
+.my .my-content {
+	position: absolute;
+	top: 150rpx;
+	right: 120rpx;
+	bottom: 0;
+	left: 120rpx;
+}
+
+.my .my-content .content-item {
+	height: 80rpx;
+	line-height: 80rpx;
+	background: #fff;
+	margin: 30rpx 0;
+}
+
+.my .my-content .content-item .item-title {
+	float: left;
+	width: 150rpx;
+	color: #78d1e5;
+	text-align: center;
+}
+
+.my .my-content .content-item .item-info {
+	float: left;
+	color: #5e5e5d;
+}
+
+.my .my-content .change-info {
+	width: 200rpx;
+	height: 60rpx;
+	margin: 20rpx auto;
+	background: #51ccf0;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 10rpx;
+	text-align: center;
+	line-height: 60rpx;
+}

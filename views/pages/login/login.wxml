@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="top-bgc"></view>
+	<view class="bottom-bgc"></view>
+	<view class="container-avatar">
+		<image src="../../image/avatar.png" mode="scaleToFill"></image>
+	</view>
+	<view class="input-box">
+		<input
+			model:value="{{accountNumber}}"
+			placeholder="学号/工号"
+			placeholder-class="input-color"
+		/>
+		<input
+			model:value="{{password}}"
+			placeholder="密码"
+			password="true"
+			placeholder-class="input-color"
+		/>
+	</view>
+	<text class="forget-password" bindtap="forgetPassword">忘记密码？</text>
+	<button class="login-btn" bindtap="toLogin">登录</button>
+</view>

@@ -1,0 +1,79 @@
+/**index.wxss**/
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 200rpx 0;
+	box-sizing: border-box;
+} 
+
+.container .top-bgc {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #f9686c;
+}
+
+.container .bottom-bgc {
+	position: absolute;
+	top: 200rpx;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #40a9f5;
+	border-radius: 305rpx 305rpx 0 0;
+	border-top: 2rpx solid #fff;
+}
+
+.container .container-avatar {
+	position: absolute;
+	top: 75rpx;
+	left: 225rpx;
+	width: 300rpx;
+	height: 300rpx;
+	border-radius: 150rpx;
+	background: #fff;
+}
+
+.container .container-avatar image {
+	width: 300rpx;
+	height: 300rpx;
+}
+
+.container .input-box {
+	position: absolute;
+	top: 450rpx;
+}
+
+.container .input-box input {
+	width: 400rpx;
+	height: 80rpx;
+	border: 2rpx solid #fff;
+	margin-bottom: 25rpx;
+	border-radius: 10rpx;
+	color: #fff;
+	font: 30rpx/80rpx "微软雅黑";
+	text-align: center;
+}
+
+.container .input-box .input-color {
+	color: #fff;
+}
+
+.container .forget-password {
+	position: absolute;
+	top: 670rpx;
+	right: 175rpx;
+	color: #fff;
+}
+
+.container .login-btn {
+	position: absolute;
+	bottom: 350rpx;
+	background: #0c83bf;
+	color: #fff ;
+}

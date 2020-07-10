@@ -1,0 +1,32 @@
+<view class="recording">
+	<view
+		class="recording-item"
+		wx:for="{{dataList}}"
+		wx:key="index"
+	>
+		<view
+			class="item-time"
+		>{{item.time}}</view>
+		<view
+			class="item-state state-by"
+			wx:if="{{item.state == 1}}"
+			bindtap="toInfoPage"
+			data-item="{{item}}"
+			data-index="{{index}}"
+		>已批准</view>
+		<view
+			class="item-state state-audit"
+			wx:elif="{{item.state == 0}}"
+			bindtap="toInfoPage"
+			data-item="{{item}}"
+			data-index="{{index}}"
+		>审批中</view>
+		<view
+			class="item-state state-no"
+			wx:else
+			bindtap="toInfoPage"
+			data-item="{{item}}"
+			data-index="{{index}}"
+		>未批准</view>
+	</view>
+</view>

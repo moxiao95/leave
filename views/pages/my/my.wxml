@@ -1,0 +1,32 @@
+<view class="my">
+	<view class="top-bgc"></view>
+	<view class="top-img">
+		<image src="../../image/avatar.png" mode="scaleToFill"></image>
+	</view>
+	<view class="my-content">
+		<view class="content-item">
+			<text class="item-title">宿舍</text>
+			<text class="item-info">{{room}}</text>
+		</view>
+		<view class="content-item">
+			<text class="item-title">班级</text>
+			<text class="item-info">{{class}}</text>
+		</view>
+		<view class="content-item">
+			<text class="item-title">学号</text>
+			<text class="item-info">{{id}}</text>
+		</view>
+		<view class="content-item">
+			<text class="item-title">姓名</text>
+			<text class="item-info">{{name}}</text>
+		</view>
+		<view
+			class="change-info"
+			bindtap="changeInfo"
+		>修改信息</view>
+		<view
+			class="change-info"
+			bindtap="changePassword"
+		>修改密码</view>
+	</view>
+</view>

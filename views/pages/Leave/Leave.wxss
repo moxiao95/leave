@@ -1,0 +1,37 @@
+.leave {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #eaeaea;
+}
+
+.leave .leave-head {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 100rpx;
+	background: #f9686c;
+	color: #fff;
+	z-index: 10;
+	text-align: center;
+	font: bold 40rpx/60rpx "微软雅黑";
+}
+
+.leave .leave-selest-box {
+	margin-top: 100rpx;
+}
+
+.leave .leave-selest-box .item-title {
+	height: 80rpx;
+	font: 30rpx/80rpx "微软雅黑";
+	text-align: center;
+}
+
+.leave .leave-selest-box .item-textaera {
+	margin-bottom: 20rpx;
+	font-size: 30rpx;
+	background: #fff;
+}

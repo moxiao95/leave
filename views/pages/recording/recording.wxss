@@ -1,0 +1,41 @@
+.recording {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #eaeaea;
+}
+.recording .recording-item {
+	height: 60rpx;
+	margin: 20rpx 0;
+	font: 30rpx/60rpx "微软雅黑";
+}
+.recording .recording-item .item-time {
+	float: left;
+	width: 460rpx;
+	margin-left: 40rpx;
+	color: #000;
+	background: #fff;
+	border-radius: 10rpx;
+	text-align: center;
+}
+.recording .recording-item .item-state {
+	float: right;
+	height: 60rpx;
+	margin-right:40rpx;
+	width: 150rpx;
+	color: #fff;
+	text-align: center;
+	border-radius: 10rpx;
+}
+
+.recording .recording-item .state-by {
+	background: #3bb8ea;
+}
+.recording .recording-item .state-audit {
+	background: #f9686c;
+}
+.recording .recording-item .state-no {
+	background: #c1beb9;
+}
