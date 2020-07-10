@@ -13,11 +13,6 @@ app.use(async (ctx, next) => {
     await next();
 });
 
-router.get('/d', async(ctx, next) => {
-    let name = ctx.params.name;
-    ctx.response.body = `<h1>hello: ${name}</h1>`;
-});
-
 router.get('/s', async(ctx, next) => {
     let data = await mysql.queryStudent();
     ctx.body = {
