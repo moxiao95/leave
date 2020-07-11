@@ -29,6 +29,7 @@ router.post('/login', async (ctx, next) => {
     let teacherData = await mysql.queryTeacher();
     let leaveData = await mysql.queryLeave();
     console.log(studentData, teacherData, leaveData);
+    console.log(list);
     ctx.response.body = {
         state: 200,
         data: list,
