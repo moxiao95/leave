@@ -1,48 +1,64 @@
 <view class="leave">
-	<view class="leave-head">{{ nowTime }}</view>
-	<view class="leave-selest-box">
-		<view class="item-title">请假类型</view>
-		<view>
-			<picker
-				bindchange="bindPickerChange"
-				value="{{index}}"
-				range="{{array}}"
-			>
-				<a class="weui-btn_cell weui-btn_cell-primary">{{array[index]}}</a>
-			</picker>
+	<view wx:if="{{show}}">
+		<view class="leave-head">{{ nowTime }}</view>
+		<view class="leave-selest-box">
+			<view class="item-title">请假类型</view>
+			<view>
+				<picker
+					bindchange="bindPickerChange"
+					value="{{index}}"
+					range="{{array}}"
+				>
+					<a class="weui-btn_cell weui-btn_cell-primary">{{array[index]}}</a>
+				</picker>
+			</view>
+			<view class="item-title">开始时间</view>
+			<view>
+				<picker
+					mode="date"
+					value="{{startTime}}"
+					start="2000-01-01"
+					end="2100-12-31"
+					bindchange="bindStartDateChange"
+				>
+					<a class="weui-btn_cell weui-btn_cell-primary">{{startTime}}</a>
+				</picker>
+			</view>
+			<view class="item-title">结束时间</view>
+			<view>
+				<picker
+					mode="date"
+					value="{{endTime}}"
+					start="2000-01-01"
+					end="2100-12-31"
+					bindchange="bindEndDateChange"
+				>
+					<a class="weui-btn_cell weui-btn_cell-primary">{{endTime}}</a>
+				</picker>
+			</view>
+			<view class="item-title">请假理由</view>
+			<view class="item-textaera">
+				<textarea
+					class="weui-textarea"
+					placeholder="请假理由"
+					bindinput="textValueChange"
+				/>
+			</view>
+			<a class="weui-btn weui-btn_primary" bindtap="submitApplication">提交申请</a>
 		</view>
-		<view class="item-title">开始时间</view>
-		<view>
-			<picker
-				mode="date"
-				value="{{startTime}}"
-				start="2000-01-01"
-				end="2100-12-31"
-				bindchange="bindStartDateChange"
-			>
-				<a class="weui-btn_cell weui-btn_cell-primary">{{startTime}}</a>
-			</picker>
+	</view>
+	<view wx:else>
+		<view
+			class="leave-list-item"
+			wx:for="{{leaveList}}"
+			wx:key="id"
+		>
+			<view class="list-item-title">{{item.title}}</view>
+			<view
+				class="list-item-btn"
+				data-id="{{item.id}}"
+				bindtap="toDetailspage"
+			>查看详情</view>
 		</view>
-		<view class="item-title">结束时间</view>
-		<view>
-			<picker
-				mode="date"
-				value="{{endTime}}"
-				start="2000-01-01"
-				end="2100-12-31"
-				bindchange="bindEndDateChange"
-			>
-				<a class="weui-btn_cell weui-btn_cell-primary">{{endTime}}</a>
-			</picker>
-		</view>
-		<view class="item-title">请假理由</view>
-		<view class="item-textaera">
-			<textarea
-				class="weui-textarea"
-				placeholder="请假理由"
-				bindinput="textValueChange"
-			/>
-		</view>
-		<a class="weui-btn weui-btn_primary" bindtap="submitApplication">提交申请</a>
 	</view>
 </view>

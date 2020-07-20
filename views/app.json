@@ -1,45 +1,47 @@
 {
-	"pages": [
-		"pages/login/login",
-		"pages/my/my",
-		"pages/recording/recording",
-		"pages/Leave/Leave",
-		"pages/info/info",
-		"pages/changeInfo/changeInfo",
-		"pages/changePassword/changePassword"
-	],
-	"window": {
-		"backgroundTextStyle": "light",
-		"navigationBarBackgroundColor": "#f9686c",
-		"navigationBarTitleText": "",
-		"navigationBarTextStyle": "black"
-	},
-	"style": "v2",
-	"sitemapLocation": "sitemap.json",
-	"tabBar": {
-		"color": "#2c2c2c",
-		"selectedColor": "#d81e06",
-		"borderStyle": "black",
-		"backgroundColor": "#fff",
-		"list": [
-			{
-				"pagePath": "pages/Leave/Leave",
-				"text": "请假",
-				"iconPath": "image/tabBarImg/leave.png",
-				"selectedIconPath": "image/tabBarImg/leave_select.png"
-			},
-			{
-				"pagePath": "pages/recording/recording",
-				"text": "请假记录",
-				"iconPath": "image/tabBarImg/list.png",
-				"selectedIconPath": "image/tabBarImg/list_select.png"
-			},
-			{
-				"pagePath": "pages/my/my",
-				"text": "我的",
-				"iconPath": "image/tabBarImg/my.png",
-				"selectedIconPath": "image/tabBarImg/my_select.png"
-			}
-		]
-	}
+    "pages": ["pages/my/my",
+        "pages/recording/recording",
+        "pages/Leave/Leave",
+        "pages/login/login",
+        
+        "pages/info/info",
+        "pages/changeInfo/changeInfo",
+        "pages/changePassword/changePassword",
+        "pages/details/details",
+        "pages/listInfo/listInfo"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f9686c",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#2c2c2c",
+        "selectedColor": "#d81e06",
+        "borderStyle": "black",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/Leave/Leave",
+                "text": "请假",
+                "iconPath": "image/tabBarImg/leave.png",
+                "selectedIconPath": "image/tabBarImg/leave_select.png"
+            },
+            {
+                "pagePath": "pages/recording/recording",
+                "text": "请假记录",
+                "iconPath": "image/tabBarImg/list.png",
+                "selectedIconPath": "image/tabBarImg/list_select.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "image/tabBarImg/my.png",
+                "selectedIconPath": "image/tabBarImg/my_select.png"
+            }
+        ]
+    }
 }

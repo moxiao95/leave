@@ -1,15 +1,63 @@
 Page({
     data: {
+		// 展示学生还是老师
+		show: false,
+		// 现在时间
 		nowTime: '',
+		// 请假开始时间
 		startTime: '2000-01-01',
+		// 请假结束时间
 		endTime: '2000-01-01',
+		// 默认请假类型
 		index: 0,
+		// 请假类型
 		array: ['事假', '病假'],
+		// 请假理由
 		textValue: '',
+		// 批假列表
+		leaveList: [
+			{
+				id: 1,
+				title: '病假',
+			},
+			{
+				id: 2,
+				title: '病假',
+			},
+			{
+				id: 3,
+				title: '病假',
+			},
+		],
     },
 
     onLoad() {
 		this.getNowTime();
+		let app = getApp();
+		this.setData({
+			show: app.globalData.sOrt,
+		});
+		if (app.globalData.sOrt) {
+			// 学生
+			wx.setTabBarItem({
+				index: 0,
+				text: '请假',
+			});
+			wx.setTabBarItem({
+				index: 1,
+				text: '请假记录',
+			});
+		} else {
+			// 老师
+			wx.setTabBarItem({
+				index: 0,
+				text: '批假',
+			});
+			wx.setTabBarItem({
+				index: 1,
+				text: '批假记录',
+			});
+		}
 	},
 
 	// 获取时间
@@ -76,7 +124,6 @@ Page({
 	
 	// 提交申请
 	submitApplication() {
-		console.log(this.data)
 		wx.showToast({
 			title: '成功',
 			icon: 'success',
@@ -89,5 +136,13 @@ Page({
 		this.setData({
             textValue: e.detail.value,
         });
-	}
+	},
+
+	// 跳转详情页面
+	toDetailspage(o) {
+		let id = o.currentTarget.dataset.id;
+		wx.navigateTo({
+			url: `../details/details?id=${id}`,
+	  });
+	},
 });

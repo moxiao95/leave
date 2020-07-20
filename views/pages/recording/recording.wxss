@@ -39,3 +39,32 @@
 .recording .recording-item .state-no {
 	background: #c1beb9;
 }
+
+.recording .recording-list-item {
+	height: 60rpx;
+	padding: 0 25rpx; 
+	margin: 25rpx 0;
+}
+.recording .recording-list-item .list-item-info {
+	float: left;
+	width: 500rpx;
+	background: #fff;
+	line-height: 60rpx;
+	text-indent: 20rpx;
+}
+.recording .recording-list-item .list-item-no {
+	float: right;
+	width: 150rpx;
+	background: #c1beb9;
+	line-height: 60rpx;
+	text-align: center;
+	color: #fff;
+}
+.recording .recording-list-item .list-item-yes {
+	float: right;
+	width: 150rpx;
+	background: #3bb8ea;
+	line-height: 60rpx;
+	text-align: center;
+	color: #fff;
+}

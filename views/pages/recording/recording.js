@@ -26,6 +26,19 @@ Page({
 				leaveClass: 1,
 			},
 		],
+		show: true,
+		recordingList: [
+			{
+				id: 1,
+				state: 1,
+				info: '赵兴-1班',
+			},
+			{
+				id: 1,
+				state: 2,
+				info: '赵兴-1班',
+			},
+		],
 	},
 
 	onLoad() {
@@ -33,12 +46,25 @@ Page({
 			backgroundColor: '#f9686c',
 			frontColor: '#ffffff',
 		});
+		let app = getApp();
+		this.setData({
+			show: app.globalData.sOrt,
+		});
 	},
 
+	// 学生进入详情页面
 	toInfoPage(o) {
 		let {time, state, id, leaveClass} = o.currentTarget.dataset.item;
 		wx.navigateTo({
 		  	url: `../info/info?time=${time}&state=${state}&id=${id}&leaveClass=${leaveClass}`,
 		});
 	},
+
+	// 老师进入详情页面
+	toListPage(o) {
+		let id = o.currentTarget.dataset.id;
+		wx.navigateTo({
+			url: `../listInfo/listInfo?id=${id}`,
+	  	});
+	}
 });

@@ -71,6 +71,29 @@
 	color: #fff;
 }
 
+.container .login-select {
+	position: absolute;
+	top: 670rpx;
+	right: 175rpx;
+	left: 175rpx;
+	height: 30rpx;
+	color: #fff;
+	display: flex;
+	justify-content: space-around;
+}
+
+.container .login-select .login-select-item {
+	height: 30rpx;
+}
+
+.container .login-select .login-select-item .select-item-box {
+	float: left;
+}
+.container .login-select .login-select-item .select-item-title {
+	float: left;
+}
+
+
 .container .login-btn {
 	position: absolute;
 	bottom: 350rpx;

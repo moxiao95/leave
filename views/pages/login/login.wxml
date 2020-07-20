@@ -18,6 +18,24 @@
 			placeholder-class="input-color"
 		/>
 	</view>
-	<text class="forget-password" bindtap="forgetPassword">忘记密码？</text>
+	<!-- <text class="forget-password" bindtap="forgetPassword">忘记密码？</text> -->
+	<radio-group
+		class="login-select"
+		 bindchange="radioChange"
+	>
+        <view
+			class="login-select-item"
+			wx:for="{{items}}"
+			wx:key="value"
+		>
+			<view class="select-item-box">
+				<radio
+					value="{{item.value}}"
+					checked="{{item.checked}}"
+				/>
+			</view>
+			<view class="select-item-title">{{item.name}}</view>
+        </view>
+	</radio-group>
 	<button class="login-btn" bindtap="toLogin">登录</button>
 </view>

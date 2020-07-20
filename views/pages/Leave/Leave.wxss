@@ -35,3 +35,27 @@
 	font-size: 30rpx;
 	background: #fff;
 }
+
+.leave .leave-list-item {
+	height: 80rpx;
+	padding: 0 30rpx;
+	margin: 25rpx 0;
+}
+
+.leave .leave-list-item .list-item-title {
+	float: left;
+	width: 500rpx;
+	height: 80rpx;
+	background: #fff;
+	line-height: 80rpx;
+	text-indent: 25rpx;
+}
+.leave .leave-list-item .list-item-btn {
+	float: right;
+	width: 190rpx;
+	height: 80rpx;
+	background: #3bb8ea;
+	text-align: center;
+	line-height: 80rpx;
+	color: #fff;
+}
