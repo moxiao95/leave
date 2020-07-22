@@ -1,1 +1,71 @@
-/* pages/details/details.wxss */
+.details {
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #eaeaea;
+}
+
+.details .details-head-title {
+    display: block;
+    height: 150rpx;
+    font: bold 40rpx/150rpx "微软雅黑";
+    text-align: center;
+}
+
+.details .info-title {
+	display: block;
+	text-align: center;
+	height: 120rpx;
+	font: bold 36rpx/120rpx "微软雅黑";
+	color: #51514f;
+}
+.details .leave-info {
+	background: #fff;
+	padding: 20rpx 0;
+}
+.details .list-info {
+	height: 60rpx;
+	background: #fff;
+	margin: 15rpx 0;
+	line-height: 60rpx;
+}
+
+.details .list-info .info-key {
+	float: left;
+	width: 200rpx;
+	font-weight: bold;
+	text-align: center;
+	color: #50b4d3;
+}
+
+.details .list-info .info-value {
+	float: left;
+	margin-left: 10rpx;
+	color: #51514f;
+}
+
+.details .details-btns {
+    display: flex;
+    height: 60rpx;
+    margin: 30rpx 0;
+    justify-content: center;
+}
+
+.details .details-btns view {
+    width: 200rpx;
+	height: 60rpx;
+	margin: 20rpx 20rpx;
+	text-align: center;
+	border-radius: 10rpx;
+	line-height: 60rpx;
+	color: #fff;
+}
+
+.details .details-btns .details-btn-yes {
+    background: #3bb8ea;
+}
+.details .details-btns .details-btn-no {
+    background: #c1beb9;
+}

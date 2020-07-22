@@ -58,3 +58,27 @@
 	text-align: center;
 	line-height: 60rpx;
 }
+
+.my .t-content {
+	position: absolute;
+	top: 150rpx;
+	right: 120rpx;
+	bottom: 0;
+	left: 120rpx;
+}
+.my .t-content .t-list-item {
+	height: 80rpx;
+	line-height: 80rpx;
+	background: #fff;
+	margin: 30rpx 0;
+}
+.my .t-content .t-list-item .t-item-title {
+	float: left;
+	width: 150rpx;
+	color: #78d1e5;
+	text-align: center;
+}
+.my .t-content .t-list-item .t-item-info {
+	float: left;
+	color: #5e5e5d;
+}

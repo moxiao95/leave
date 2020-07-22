@@ -13,30 +13,50 @@ app.use(async (ctx, next) => {
     await next();
 });
 
-router.get('/s', async(ctx, next) => {
-    let data = await mysql.queryStudent();
-    ctx.body = {
-        data,
-        s: 'sss',
-    }
-});
-
-router.post('/login', async (ctx, next) => {
+// 学生登录
+router.post('/slogin', async (ctx, next) => {
     let id = ctx.request.body.id || '',
         password = ctx.request.body.password || '';
-    let list = [];
-    let studentData = await mysql.queryStudent();
-    let teacherData = await mysql.queryTeacher();
-    let leaveData = await mysql.queryLeave();
-    console.log(studentData, teacherData, leaveData);
-    console.log(list);
+    console.log(id, password)
+    let studentData = await mysql.queryStudent(id, password);
+    console.log(studentData);
     ctx.response.body = {
         state: 200,
-        data: list,
+        data: studentData,
         msg: '登录成功',
     };
 });
-
+// 老师登录
+router.post('/tlogin', async (ctx, next) => {
+    let id = ctx.request.body.id || '',
+        password = ctx.request.body.password || '';
+    console.log(id, password);
+    let teacherData = await mysql.queryTeacher(id, password);
+    console.log(teacherData);
+    ctx.response.body = {
+        state: 200,
+        data: teacherData,
+        msg: '登录成功',
+    };
+});
+// 学生查找请假表
+router.get('/sleaves', async(ctx, next) => {
+    let data = await mysql.sQueryLeave();
+    ctx.body = {
+        state: 200,
+        data,
+        msg: '查找成功',
+    }
+});
+// 老师查找请假表
+router.get('/tleaves', async(ctx, next) => {
+    let data = await mysql.tQueryLeave();
+    ctx.body = {
+        state: 200,
+        data,
+        msg: '查找成功',
+    }
+});
 
 app.use(router.routes());
 

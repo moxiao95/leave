@@ -13,9 +13,10 @@ class Mysql {
 
     }
     // 找学生表
-    queryStudent() {
+    queryStudent(i, p) {
+        let sqls = `SELECT id,name,room,class FROM student WHERE ID=${i} AND PASSWORD="${p}"`;
         return new Promise((resolve, reject) => {
-            pool.query('SELECT * from student', function (error, results) {
+            pool.query(sqls, function (error, results) {
                 if (error) {
                     console.log(error);
                     return;
@@ -25,9 +26,10 @@ class Mysql {
         });
     }
     // 找老师表
-    queryTeacher() {
+    queryTeacher(i, p) {
+        let sqls = `SELECT id,name FROM teacher WHERE ID=${i} AND PASSWORD="${p}"`;
         return new Promise((resolve, reject) => {
-            pool.query('SELECT * from teacher', function (error, results) {
+            pool.query(sqls, function (error, results) {
                 if (error) {
                     console.log(error);
                     return;
@@ -36,10 +38,22 @@ class Mysql {
             });
         });
     }
-    // 找请假表
-    queryLeave() {
+    // 学生查找请假表
+    sQueryLeave() {
         return new Promise((resolve, reject) => {
-            pool.query('SELECT * from `leave`', function (error, results) {
+            pool.query('SELECT * from leaves', function (error, results) {
+                if (error) {
+                    console.log(error);
+                    return;
+                };
+                resolve(results);
+            });
+        });
+    }
+    // 老师查找请假表
+    tQueryLeave() {
+        return new Promise((resolve, reject) => {
+            pool.query('SELECT * from leaves', function (error, results) {
                 if (error) {
                     console.log(error);
                     return;

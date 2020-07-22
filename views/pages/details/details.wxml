@@ -1,2 +1,39 @@
-<!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+<view class="details">
+    <text
+        class="details-head-title"
+    >{{leaveClass == 0 ? '事假' : '病假'}}</text>
+    <view class="list-info">
+		<text class="info-key">姓名</text>
+		<text class="info-value">{{name}}</text>
+	</view>
+	<view class="list-info">
+		<text class="info-key">学号</text>
+		<text class="info-value">{{id}}</text>
+	</view>
+	<view class="list-info">
+		<text class="info-key">班级</text>
+		<text class="info-value">{{class}}</text>
+	</view>
+	<view class="list-info">
+		<text class="info-key">宿舍</text>
+		<text class="info-value">{{room}}</text>
+	</view>
+	<view class="leave-info">
+		<view class="list-info">
+			<text class="info-key">请假时间</text>
+			<text class="info-value">{{time}}</text>
+		</view>
+		<view class="list-info">
+			<text class="info-key">请假理由</text>
+			<text class="info-value">{{reason}}</text>
+		</view>
+	</view>
+    <view class="details-btns">
+        <view
+            class="details-btn-yes"
+        >批准</view>
+        <view
+            class="details-btn-no"
+        >不批准</view>
+    </view>
+</view>

@@ -1,9 +1,9 @@
 {
-    "pages": ["pages/my/my",
+    "pages": [
+        "pages/login/login",
         "pages/recording/recording",
         "pages/Leave/Leave",
-        "pages/login/login",
-        
+        "pages/my/my",
         "pages/info/info",
         "pages/changeInfo/changeInfo",
         "pages/changePassword/changePassword",

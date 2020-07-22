@@ -1,4 +1,5 @@
 <view class="my">
+	<!-- 学生 -->
 	<view wx:if="{{show}}">
 		<view class="top-bgc"></view>
 		<view class="top-img">
@@ -31,10 +32,17 @@
 			>修改密码</view>
 		</view>
 	</view>
+	<!-- 老师 -->
 	<view wx:else>
 		<view class="top-bgc"></view>
 		<view class="top-img">
 			<image src="../../image/avatar.png" mode="scaleToFill"></image>
+		</view>
+		<view class="t-content">
+			<view class="t-list-item">
+				<text class="t-item-title">账户信息</text>
+				<text class="t-item-info">123456</text>
+			</view>
 		</view>
 	</view>
 </view>
