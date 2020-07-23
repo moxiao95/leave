@@ -35,6 +35,9 @@
 	font-size: 30rpx;
 	background: #fff;
 }
+.leave .leave-selest-box .item-textaera .weui-textarea {
+	height: 120rpx;
+}
 
 .leave .leave-list-item {
 	height: 80rpx;
@@ -51,6 +54,8 @@
 	text-indent: 25rpx;
 }
 .leave .leave-list-item .list-item-btn {
+	position: relative;
+	z-index: 10;
 	float: right;
 	width: 190rpx;
 	height: 80rpx;

@@ -1,7 +1,7 @@
 <view class="details">
     <text
         class="details-head-title"
-    >{{leaveClass == 0 ? '事假' : '病假'}}</text>
+    >{{type == 0 ? '事假' : '病假'}}</text>
     <view class="list-info">
 		<text class="info-key">姓名</text>
 		<text class="info-value">{{name}}</text>
@@ -31,9 +31,11 @@
     <view class="details-btns">
         <view
             class="details-btn-yes"
+			bindtap="approve"
         >批准</view>
         <view
             class="details-btn-no"
+			bindtap="noApprove"
         >不批准</view>
     </view>
 </view>

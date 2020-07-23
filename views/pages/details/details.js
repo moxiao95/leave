@@ -8,23 +8,53 @@ Page({
 		room: '101',
 		time: '2017.12.11 - 2017.12.12',
 		reason: '生病',
-		state: 0,
-		leaveClass: 0,
-    },
+		type: 0,
+	},
+
     onLoad(o) {
         this.setData({
             queryId: o.id,
         });
+		let that  = this;
+		let app = getApp();
 
-        let app = getApp();
-        this.setData({
-			time: o.time,
-			state: o.state,
-			leaveClass: o.leaveClass,
-			name: app.globalData.name,
-			id: app.globalData.id,
-			class: app.globalData.class,
-			room: app.globalData.room,
+		wx.request({
+			url: 'http://localhost:3000/details',
+			data: {
+				id: o.id,
+			},
+			success({data}) {
+				console.log(data);
+				that.setData({
+					time: data.data[0].time,
+					state: data.data[0].state,
+					type: data.data[0].type,
+					id: data.data[0].s_id,
+					reason: data.data[0].reason,
+				});
+				wx.request({
+					url: 'http://localhost:3000/student',
+					data: {
+						id: data.data[0].s_id,
+					},
+					success(d) {
+						console.log(d)
+						that.setData({
+							mame: d.data.data[0].name,
+							class: d.data.data[0].class,
+							room: d.data.data[0].room,
+						});
+					},
+				});
+			},
 		});
     },
+
+	approve() {
+
+	},
+
+	noApprove() {
+
+	},
 });

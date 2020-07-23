@@ -9,7 +9,17 @@
 					value="{{index}}"
 					range="{{array}}"
 				>
-					<a class="weui-btn_cell weui-btn_cell-primary">{{array[index]}}</a>
+					<a class="weui-btn_cell weui-btn_cell-primary">{{leaveArray[leaveIndex]}}</a>
+				</picker>
+			</view>
+			<view class="item-title">请假老师</view>
+			<view>
+				<picker
+					bindchange="bindPickerChange"
+					value="{{tIndex}}"
+					range="{{tNameArray}}"
+				>
+					<a class="weui-btn_cell weui-btn_cell-primary">{{tNameArray[tIndex]}}</a>
 				</picker>
 			</view>
 			<view class="item-title">开始时间</view>
@@ -53,7 +63,7 @@
 			wx:for="{{leaveList}}"
 			wx:key="id"
 		>
-			<view class="list-item-title">{{item.title}}</view>
+			<view class="list-item-title">{{item.type}}</view>
 			<view
 				class="list-item-btn"
 				data-id="{{item.id}}"

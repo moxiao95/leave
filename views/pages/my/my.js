@@ -1,10 +1,10 @@
 Page({
 	data: {
 		show: true,
-		room: '101',
-		class: '1班',
-		id: 123654,
-		name: '赵星',
+		room: null,
+		class: null,
+		id: null,
+		name: null,
 	},
 
 	onLoad() {
