@@ -1,5 +1,5 @@
 <view class="info">
-	<text class="info-title">{{leaveClass == 0 ? '事假' : '病假'}}</text>
+	<text class="info-title">{{type == 0 ? '事假' : '病假'}}</text>
 	<view class="list-info">
 		<text class="info-key">姓名</text>
 		<text class="info-value">{{name}}</text>

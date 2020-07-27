@@ -51,10 +51,34 @@ Page({
     },
 
 	approve() {
-
+		wx.request({
+			method: 'POST',
+			url: 'http://localhost:3000/leaveState',
+			data: {
+				state: 1,
+				id: this.data.queryId,
+			},
+			success({data}) {
+				wx.navigateBack({
+					delta: 1,
+				});
+			},
+		});
 	},
 
 	noApprove() {
-
+		wx.request({
+			method: 'POST',
+			url: 'http://localhost:3000/leaveState',
+			data: {
+				state: 2,
+				id: this.data.queryId,
+			},
+			success({data}) {
+				wx.navigateBack({
+					delta: 1,
+				});
+			},
+		});
 	},
 });

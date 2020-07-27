@@ -40,6 +40,9 @@ Page({
 
     onLoad() {
 		this.getNowTime();
+	},
+
+	loadFn() {
 		let app = getApp();
 		let that = this;
 		this.setData({
@@ -102,6 +105,10 @@ Page({
 				},
 			});
 		}
+	},
+
+	onShow() {
+		this.loadFn();
 	},
 
 	// 获取时间

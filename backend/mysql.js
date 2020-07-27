@@ -111,6 +111,20 @@ class Mysql {
         });
     }
 
+    // 批改请假状态-details
+    changeLeaveState(id, state) {
+        let sqls = `UPDATE leaves SET state='${state}' WHERE id='${id}'`;
+        return new Promise((resolve, reject) => {
+            pool.query(sqls, function (error, results) {
+                if (error) {
+                    console.log(error);
+                    return;
+                };
+                resolve(results);
+            });
+        });
+    }
+
     // 学生查找请假表-recording
     sQueryLeave(id) {
         let sqls = `SELECT id,time,state,type FROM leaves WHERE s_id='${id}'`;

@@ -99,6 +99,7 @@ router.get('/details', async (ctx, next) => {
     });
 });
 
+// 查找学生信息-details
 router.get('/student', async (ctx, next) => {
     let id = ctx.url.split('=')[1];
     await mysql.queryStudent(id).then((data) => {
@@ -108,6 +109,21 @@ router.get('/student', async (ctx, next) => {
             state: 200,
             msg: '查找成功',
         }
+    });
+});
+
+// 批改请假状态-details
+router.post('/leaveState', async (ctx, next) => {
+    let id = ctx.request.body.id || '',
+        state = ctx.request.body.state || '';
+    console.log(id, state);
+    await mysql.changeLeaveState(id, state).then((data) => {
+        console.log(data);
+        ctx.response.body = {
+            data,
+            state: 200,
+            msg: '申请成功',
+        };
     });
 });
 

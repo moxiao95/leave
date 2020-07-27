@@ -71,8 +71,9 @@ Page({
 					id: '1001',
 				},
 				success({data}) {
+					console.log(data)
 					that.setData({
-						dataList: data.data,
+						recordingList: data.data,
 					});
 				},
 			});
@@ -81,7 +82,7 @@ Page({
 
 	// 学生进入详情页面
 	toInfoPage(o) {
-		let {time, state, id, leaveClass} = o.currentTarget.dataset.item;
+		let {time, state, id, type} = o.currentTarget.dataset.item;
 		wx.navigateTo({
 		  	url: `../info/info?time=${time}&state=${state}&id=${id}&type=${type}`,
 		});
