@@ -61,9 +61,10 @@ router.post('/leave', async (ctx, next) => {
         time = ctx.request.body.time || '',
         reason = ctx.request.body.reason || '',
         id = ctx.request.body.id || '',
-        tId = ctx.request.body.tId || '';
-    console.log(id, tId, type, time, reason);
-    await mysql.toLeave(id, tId, type, time, reason).then((data) => {
+        tId = ctx.request.body.tId || '',
+        sName = ctx.request.body.sName || '';
+    console.log(id, tId, type, time, reason, sName);
+    await mysql.toLeave(id, tId, type, time, reason, sName).then((data) => {
         console.log(data);
         ctx.response.body = {
             data,

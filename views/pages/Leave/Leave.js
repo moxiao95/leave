@@ -3,6 +3,8 @@ Page({
 		// 展示学生还是老师
 		show: false,
 		id: null,
+		// 学生名
+		sName: null,
 		// 现在时间
 		nowTime: '',
 		// 请假开始时间
@@ -75,6 +77,9 @@ Page({
 					});
 				},
 			});
+			this.setData({
+				sName: app.globalData.name,
+			});
 		} else {
 			// 老师
 			wx.setTabBarItem({
@@ -97,9 +102,9 @@ Page({
 							id: t.id,
 							type: t.type == 0 ? '事假' : '病假',
 						});
-						that.setData({
-							leaveList: list,
-						});
+					});
+					that.setData({
+						leaveList: list,
 					});
 					console.log(data)
 				},
@@ -175,7 +180,6 @@ Page({
 	
 	// 提交申请
 	submitApplication() {
-		console.log(this.data)
 		wx.request({
 			url: 'http://localhost:3000/leave',
 			method: 'POST',
@@ -188,15 +192,16 @@ Page({
 				time: `${this.data.startTime}-${this.data.endTime}`,
 				reason: this.data.textValue,
 				type: this.data.leaveIndex,
+				sName: this.data.sName,
 			},
 			success({data}) {
 				console.log(data);
+				wx.showToast({
+					title: '成功',
+					icon: 'success',
+					duration: 2000,
+				});
 			},
-		});
-		wx.showToast({
-			title: '成功',
-			icon: 'success',
-			duration: 2000,
 		});
 	},
 

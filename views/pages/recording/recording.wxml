@@ -37,7 +37,7 @@
 			wx:for="{{recordingList}}"
 			wx:key="id"
 		>
-			<view class="list-item-info">{{item.info}}</view>
+			<view class="list-item-info">{{item.s_name}}</view>
 			<view
 				class="list-item-yes"
 				wx:if="{{item.state == 1}}"

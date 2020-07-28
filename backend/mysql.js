@@ -56,8 +56,8 @@ class Mysql {
     }
 
     // 申请请假-leave
-    toLeave(id, tId, type, time, reason) {
-        let sqls = `INSERT INTO leaves (s_id, t_id, time, reason, type, state) VALUES ('${id}', '${tId}', '${time}', '${reason}', '${type}', '0')`;
+    toLeave(id, tId, type, time, reason, sName) {
+        let sqls = `INSERT INTO leaves (s_id, t_id, time, reason, type, state, s_name) VALUES ('${id}', '${tId}', '${time}', '${reason}', '${type}', '0', '${sName}')`;
         return new Promise((resolve, reject) => {
             pool.query(sqls, function (error, results) {
                 if (error) {
@@ -141,7 +141,7 @@ class Mysql {
 
     // 老师查找已查看过请假表-rexording
     tQueryLeave(id) {
-        let sqls = `SELECT id,time,state,type FROM leaves WHERE t_id='${id}' AND state!='0'`;
+        let sqls = `SELECT id,s_id,s_name,time,state,type FROM leaves WHERE t_id='${id}' AND state!='0'`;
         return new Promise((resolve, reject) => {
             pool.query(sqls, function (error, results) {
                 if (error) {

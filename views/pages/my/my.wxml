@@ -40,8 +40,12 @@
 		</view>
 		<view class="t-content">
 			<view class="t-list-item">
-				<text class="t-item-title">账户信息</text>
-				<text class="t-item-info">123456</text>
+				<text class="t-item-title">工号</text>
+				<text class="t-item-info">{{id}}</text>
+			</view>
+			<view class="t-list-item">
+				<text class="t-item-title">姓名</text>
+				<text class="t-item-info">{{name}}</text>
 			</view>
 		</view>
 	</view>

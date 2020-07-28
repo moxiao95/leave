@@ -42,7 +42,6 @@ Page({
 	},
 
 	onLoad() {
-		let that = this;
 		wx.setNavigationBarColor({
 			backgroundColor: '#f9686c',
 			frontColor: '#ffffff',
@@ -51,7 +50,11 @@ Page({
 		this.setData({
 			show: app.globalData.sOrt,
 		});
+	},
 
+	loadFn() {
+		let that = this;
+		let app = getApp();
 		if (app.globalData.sOrt) {
 			wx.request({
 				url: 'http://localhost:3000/sLeaves',
@@ -78,6 +81,10 @@ Page({
 				},
 			});
 		}
+	},
+
+	onShow() {
+		this.loadFn();
 	},
 
 	// 学生进入详情页面
