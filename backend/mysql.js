@@ -9,9 +9,7 @@ const pool  = mysql.createPool({
 });
 
 class Mysql {
-    constructor () {
-
-    }
+    constructor () {}
 
     // 学生登录-login
     loginStudent(i, p) {
