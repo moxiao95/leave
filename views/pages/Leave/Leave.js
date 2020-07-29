@@ -44,6 +44,7 @@ Page({
 		this.getNowTime();
 	},
 
+	// 重复加载函数
 	loadFn() {
 		let app = getApp();
 		let that = this;
@@ -106,7 +107,6 @@ Page({
 					that.setData({
 						leaveList: list,
 					});
-					console.log(data)
 				},
 			});
 		}
