@@ -50,6 +50,7 @@ Page({
 		});
     },
 
+	// 批准
 	approve() {
 		wx.request({
 			method: 'POST',
@@ -66,6 +67,7 @@ Page({
 		});
 	},
 
+	// 不批准
 	noApprove() {
 		wx.request({
 			method: 'POST',

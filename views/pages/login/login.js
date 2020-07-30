@@ -11,8 +11,9 @@ Page({
 		],
 	},
 
+	// 修改密码
 	forgetPassword() {
-
+		console.log('修改密码');
 	},
 
 	// 登录

@@ -9,6 +9,7 @@ Page({
 		state: 0,
 		type: 0,
 	},
+
 	onLoad(o) {
 		let app = getApp();
 		this.setData({

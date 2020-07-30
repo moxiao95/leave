@@ -164,6 +164,7 @@ Page({
             dayTime: e.detail.value,
         });
 	},
+
 	// 绑定结束时间
 	bindEndDateChange(e) {
         this.setData({

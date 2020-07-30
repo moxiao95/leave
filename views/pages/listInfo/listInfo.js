@@ -10,7 +10,8 @@ Page({
 		reason: '生病',
 		state: 1,
 		type: 0,
-    },
+	},
+
     onLoad(o) {
         this.setData({
             queryId: o.id,

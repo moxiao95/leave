@@ -1,5 +1,6 @@
 Page({
 	data: {
+		// 学生数据列表
 		dataList: [
 			{
 				time: '2017.10.10 - 2020.12.12',
@@ -27,6 +28,7 @@ Page({
 			},
 		],
 		show: true,
+		// 老师数据列表
 		recordingList: [
 			{
 				id: 1,
@@ -101,5 +103,5 @@ Page({
 		wx.navigateTo({
 			url: `../listInfo/listInfo?id=${id}`,
 	  	});
-	}
+	},
 });

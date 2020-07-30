@@ -5,8 +5,6 @@
         "pages/Leave/Leave",
         "pages/my/my",
         "pages/info/info",
-        "pages/changeInfo/changeInfo",
-        "pages/changePassword/changePassword",
         "pages/details/details",
         "pages/listInfo/listInfo"
     ],
