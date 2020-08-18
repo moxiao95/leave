@@ -6,8 +6,8 @@
 			<view>
 				<picker
 					bindchange="bindPickerChange"
-					value="{{index}}"
-					range="{{array}}"
+					value="{{leaveIndex}}"
+					range="{{leaveArray}}"
 				>
 					<a class="weui-btn_cell weui-btn_cell-primary">{{leaveArray[leaveIndex]}}</a>
 				</picker>
