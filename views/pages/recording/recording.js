@@ -64,8 +64,9 @@ Page({
 					id: app.globalData.id,
 				},
 				success({data}) {
+					console.log(data)
 					that.setData({
-						dataList: data.data,
+						dataList: data.data.reverse(),
 					});
 				},
 			});
@@ -78,7 +79,7 @@ Page({
 				success({data}) {
 					console.log(data)
 					that.setData({
-						recordingList: data.data,
+						recordingList: data.data.reverse(),
 					});
 				},
 			});
@@ -93,7 +94,7 @@ Page({
 	toInfoPage(o) {
 		let {time, state, id, type} = o.currentTarget.dataset.item;
 		wx.navigateTo({
-		  	url: `../info/info?time=${time}&state=${state}&id=${id}&type=${type}`,
+		  	url: `../info/info?id=${id}`,
 		});
 	},
 

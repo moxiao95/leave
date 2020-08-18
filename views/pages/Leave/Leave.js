@@ -105,7 +105,7 @@ Page({
 						});
 					});
 					that.setData({
-						leaveList: list,
+						leaveList: list.reverse(),
 					});
 				},
 			});

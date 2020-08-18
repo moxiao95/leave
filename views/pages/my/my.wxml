@@ -7,20 +7,20 @@
 		</view>
 		<view class="my-content">
 			<view class="content-item">
-				<text class="item-title">宿舍</text>
-				<text class="item-info">{{room}}</text>
-			</view>
-			<view class="content-item">
-				<text class="item-title">班级</text>
-				<text class="item-info">{{class}}</text>
+				<text class="item-title">姓名</text>
+				<text class="item-info">{{name}}</text>
 			</view>
 			<view class="content-item">
 				<text class="item-title">学号</text>
 				<text class="item-info">{{id}}</text>
 			</view>
 			<view class="content-item">
-				<text class="item-title">姓名</text>
-				<text class="item-info">{{name}}</text>
+				<text class="item-title">班级</text>
+				<text class="item-info">{{class}}</text>
+			</view>
+			<view class="content-item">
+				<text class="item-title">宿舍</text>
+				<text class="item-info">{{room}}</text>
 			</view>
 			<!-- <view
 				class="change-info"
@@ -40,12 +40,12 @@
 		</view>
 		<view class="t-content">
 			<view class="t-list-item">
-				<text class="t-item-title">工号</text>
-				<text class="t-item-info">{{id}}</text>
-			</view>
-			<view class="t-list-item">
 				<text class="t-item-title">姓名</text>
 				<text class="t-item-info">{{name}}</text>
+			</view>
+			<view class="t-list-item">
+				<text class="t-item-title">工号</text>
+				<text class="t-item-info">{{id}}</text>
 			</view>
 		</view>
 	</view>
